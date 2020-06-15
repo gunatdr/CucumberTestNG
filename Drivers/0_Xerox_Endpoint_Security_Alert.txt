@@ -1,0 +1,15 @@
+Xerox Corporation - McAfee Security for Microsoft Exchange 
+
+BLOCKED FILE ALERT
+ 
+The sender of this message may have  sent you an executable (.exe) file within a zipped attachment. See "File Name" below.  Per Xerox Information Security policy, files with an ".exe" extension may not be sent via email. 
+
+Please refer the sender to this FAQ on IT Support@Xerox for alternative methods.
+ 
+http://itsupport.xerox.com/FAQ.aspx?faqid=1882   This link is only available within Xerox.
+
+A file has been blocked due to the "Remove Unwanted Files" rule.
+ • File Name:         IEDriverServer.exe
+ • Disallowed due to: filename
+ • Alert No.:         1ffc-5807-4472-0001
+
