@@ -1,5 +1,8 @@
 package stepDefinitions;
 
+import java.util.List;
+import java.util.Map;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -15,7 +20,7 @@ import cucumber.api.java.en.When;
 public class LoginStepDefinition{
 
 	WebDriver driver;
-
+	SoftAssert softAssert = new SoftAssert();
 	 @Given("^the user is already on youtube Page$")
 	 public void user_already_on_youtube_page() throws InterruptedException{
 //		 WebDriver driver;
@@ -45,21 +50,17 @@ public class LoginStepDefinition{
 	 String title = driver.getTitle();
 	 System.out.println("Actual title is: "+title);
 	 System.out.println("Expected title is: "+x);
-//	 Assert.assertEquals("Free CRM in the cloud software boosts sales", title);
-	 Assert.assertEquals(title, x);
+	 
+	 
+	 softAssert.assertEquals(title, "Free CRM in the cloud software boosts sales","Assert condition failed");
+//	 Assert.assertEquals(title, x);
+	 System.out.println("Assertion done.");
+
 	 }
 	 
-
 	 
-	
-//	 @Then("^user enters {String} and {String} $")
-//	 public void user_enters_username_and_password(String arg1, String arg2) throws Throwable {
-//		 
-//		 System.out.println("Inside Then "+arg1+" "+arg2);
-//		 
-//	  
-//	 }
 	 
+	 //login_ScenarioOutline using Scenario Outline and Examples keyword
 	 //Reg Exp:
 	 //1. \"([^\"]*)\"
 	 //2. \"(.*)\"
@@ -72,15 +73,37 @@ public class LoginStepDefinition{
 //	 driver.findElement(By.name("email")).sendKeys(username);
 //	 driver.findElement(By.name("password")).sendKeys(password);
 	 }
-	
-	 @Then("^user clicks on login button$")
-	 public void user_clicks_on_login_button() throws InterruptedException {
-	 WebElement loginBtn = driver.findElement(By.xpath("//div[text()='Login']"));
-	 loginBtn.click();
-	 Thread.sleep(1000);
-//	 JavascriptExecutor js = (JavascriptExecutor)driver;
-//	 js.executeScript("arguments[0].click();", loginBtn);
-	 }
+	 
+
+//	 //login_asMaps using DataTable asMaps method
+//		@Then("^user enters username and password$")
+//		public void user_enters_username_and_password(DataTable credentials) {			
+////			List<Map<String, String>> rows = credentials.asMaps(String.class, String.class);		     
+////		    for (Map<String, String> columns : rows) {
+//////		        store.addBook(new Book(columns.get("title"), columns.get("author")));
+////		        System.out.println("User name is: "+columns.get("username"));
+////				System.out.println("Pass word is: "+columns.get("password"));
+////		    }	
+//			
+//			
+//		    
+////			for (Map<String, String> data : credentials.asMaps(String.class, String.class)) {
+////				System.out.println("User name is: "+data.get("username"));
+////				System.out.println("Pass word is: "+data.get("password"));
+//////				driver.findElement(By.name("username")).sendKeys(data.get("username"));
+//////				driver.findElement(By.name("password")).sendKeys(data.get("password"));
+////			}
+//
+//		}
+//
+//	 @Then("^user clicks on login button$")
+//	 public void user_clicks_on_login_button() throws InterruptedException {
+//	 WebElement loginBtn = driver.findElement(By.xpath("//div[text()='Login']"));
+//	 loginBtn.click();
+//	 Thread.sleep(1000);
+////	 JavascriptExecutor js = (JavascriptExecutor)driver;
+////	 js.executeScript("arguments[0].click();", loginBtn);
+//	 }
 	
 	
 	 @Then("^user is on home page$")
@@ -100,18 +123,12 @@ public class LoginStepDefinition{
 //		}
 //	 
 //	 
-//	 @Then("^user enters contact details \"(.*)\" and \"(.*)\" and \"(.*)\"$")
-//	 public void user_enters_contacts_details(String firstname, String lastname, String position){
-//		 driver.findElement(By.id("first_name")).sendKeys(firstname);
-//		 driver.findElement(By.id("surname")).sendKeys(lastname);
-//		 driver.findElement(By.id("company_position")).sendKeys(position);
-//		 driver.findElement(By.xpath("//input[@type='submit' and @value='Save']")).click();
-//	 }
-//	 
 
 	 @Then("^Close the browser$")
 	 public void close_the_browser(){
+		 
 		 driver.close();
+//		 softAssert.assertAll();
 	 }
 	
 	
