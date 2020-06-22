@@ -7,7 +7,7 @@ Feature: Free CRM Login Feature
 		Then user enters username and password
 			| gunatdr@gmail.com  | gunaSK45 |
 			| manitdr@gmail.com  | gunaSK45 |
-			| kannutdr@gmail.com  | gunaSK45 |
+			| kannatdr@gmail.com  | gunaSK44 |
 		Then user clicks on login button
 		Then Close the browser
 #
