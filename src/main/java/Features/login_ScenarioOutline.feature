@@ -1,8 +1,4 @@
 Feature: Free CRM Login Feature
-	Scenario: gmail Login Test Scenario
-		Given the user is already on youtube Page
-		When title of login page is "YouTube"
-		Then Close the browser
 
 	Scenario Outline: Free CRM Login Test Scenario
 		Given user is already on Login Page
@@ -14,7 +10,7 @@ Feature: Free CRM Login Feature
 		Examples:
 			| username | password |
 			| gunatdr@gmail.com  | gunaSK45 |
-			| manitdrChangecommit3@gmail.com  | gunaSK45 |
-
+			| manitdr@gmail.com  | gunaSK45 |
+			| kannutdr@gmail.com  | gunaSK45 |
 
 		
