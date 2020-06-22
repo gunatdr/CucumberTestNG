@@ -15,6 +15,6 @@ Feature: Free CRM Login Feature
 		Examples:
 			| username | password |
 			| gunatdr@gmail.com  | gunaSK45 |
-			| manitdr@gmail.com  | gunaSK45 |
+			| manitdrChange@gmail.com  | gunaSK45 |
 
 		
