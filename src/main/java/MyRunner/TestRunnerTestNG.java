@@ -13,9 +13,11 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 
 @CucumberOptions(
-        features = "src/main/java/Features/login",
+        features = "src/main/java/Features",
         glue = {"stepDefinitions"},    
         monochrome=true,
+        tags={},
+      //  dryRun=true,
         strict=true,
         plugin = {
                 "pretty",
