@@ -14,28 +14,28 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-<!-- updated in gunaLocal through gitHub console 
-On Aug 2nd 5:36 Pm updated in master through github
+<!-- 
+On Aug 3rd 12:13am updated in gunalocal eclipse
 
 
 -->
 
 	<dependencies>
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.1.0</version>
-    <scope>compile</scope>
-</dependency>
-
-
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>7.1.0</version>
+		    <scope>compile</scope>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>3.141.59</version>
+		</dependency>
 
 		
 		<dependency>
@@ -70,6 +70,24 @@ On Aug 2nd 5:36 Pm updated in master through github
 			<artifactId>cucumber-reporting</artifactId>
 			<version>3.8.0</version>
 		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
+		<dependency>
+		    <groupId>info.cukes</groupId>
+		    <artifactId>cucumber-picocontainer</artifactId>
+		    <version>1.2.5</version>
+		    <type>pom</type>
+		    <scope>test</scope>
+		</dependency>
+
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core 
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		    <version>2.13.3</version>
+		</dependency>  -->
 	 	
 	</dependencies>
 	
@@ -87,7 +105,7 @@ On Aug 2nd 5:36 Pm updated in master through github
 				<configuration>			
 					<source>1.8</source>
 					<target>1.8</target>					
-				</configuration>
+				</configuration>  
 			</plugin>
 			
 			<plugin>
